@@ -330,10 +330,9 @@ class MimeDir extends Parser {
          * sub-pattern matched, the subsequent named patterns will not show up
          * in the result.
          */
-        foreach($matches as $match) {
-
+        foreach ($matches as $match) {
             if (isset($match['paramValue'])) {
-                if ($match['paramValue'] && $match['paramValue'][0] === '"') {
+                if ($match['paramValue'] && '"' === $match['paramValue'][0]) {
                     $value = substr($match['paramValue'], 1, -1);
                 } else {
                     $value = $match['paramValue'];
@@ -341,15 +340,18 @@ class MimeDir extends Parser {
 
                 $value = $this->unescapeParam($value);
 
+                if (is_null($lastParam)) {
+                    throw new ParseException('Invalid Mimedir file. Line starting at '.$this->startLine.' did not follow iCalendar/vCard conventions');
+                }
                 if (is_null($property['parameters'][$lastParam])) {
                     $property['parameters'][$lastParam] = $value;
                 } elseif (is_array($property['parameters'][$lastParam])) {
                     $property['parameters'][$lastParam][] = $value;
                 } else {
-                    $property['parameters'][$lastParam] = array(
+                    $property['parameters'][$lastParam] = [
                         $property['parameters'][$lastParam],
-                        $value
-                    );
+                        $value,
+                    ];
                 }
                 continue;
             }
@@ -372,7 +374,6 @@ class MimeDir extends Parser {
             // @codeCoverageIgnoreStart
             throw new \LogicException('This code should not be reachable');
             // @codeCoverageIgnoreEnd
-
         }
 
         if (is_null($property['value'])) {
@@ -382,7 +383,7 @@ class MimeDir extends Parser {
             if ($this->options & self::OPTION_IGNORE_INVALID_LINES) {
                 return false;
             }
-            throw new ParseException('Invalid Mimedir file. Line starting at ' . $this->startLine . ' did not follow iCalendar/vCard conventions');
+            throw new ParseException('Invalid Mimedir file. Line starting at '.$this->startLine.' did not follow iCalendar/vCard conventions');
         }
 
         // vCard 2.1 states that parameters may appear without a name, and only
@@ -390,10 +391,10 @@ class MimeDir extends Parser {
         //
         // Our parser will get those as parameters without a value instead, so
         // we're filtering these parameters out first.
-        $namedParameters = array();
-        $namelessParameters = array();
+        $namedParameters = [];
+        $namelessParameters = [];
 
-        foreach($property['parameters'] as $name=>$value) {
+        foreach ($property['parameters'] as $name => $value) {
             if (!is_null($value)) {
                 $namedParameters[$name] = $value;
             } else {
@@ -403,7 +404,7 @@ class MimeDir extends Parser {
 
         $propObj = $this->root->createProperty($property['name'], null, $namedParameters);
 
-        foreach($namelessParameters as $namelessParameter) {
+        foreach ($namelessParameters as $namelessParameter) {
             $propObj->add(null, $namelessParameter);
         }
 
@@ -414,7 +415,6 @@ class MimeDir extends Parser {
         }
 
         return $propObj;
-
     }
 
     /**
