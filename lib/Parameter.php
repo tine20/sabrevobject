@@ -47,6 +47,7 @@ class Parameter extends Node {
      *
      * It's recommended to use the create:: factory method instead.
      *
+     * @param Document $root
      * @param string $name
      * @param string $value
      */
@@ -64,11 +65,14 @@ class Parameter extends Node {
         // In that case we have to move the value to the name.
         if ($this->name === '') {
             $this->noName = false;
+            if (is_array($value)) {
+                $value = array_shift($value);
+            }
             $this->name = strtoupper($value);
+
         } else {
             $this->setValue($value);
         }
-
     }
 
     /**
