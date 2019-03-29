@@ -24,5 +24,3 @@ cache:
 matrix:
   allow_failures:
     - php: 5.5
-    - php: 7.2
-    - php: 7.3
