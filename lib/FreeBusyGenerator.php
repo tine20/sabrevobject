@@ -130,7 +130,7 @@ class FreeBusyGenerator {
         $this->objects = array();
         foreach($objects as $object) {
 
-            if (is_string($object)) {
+            if (is_string($object) || is_resource($object)) {
                 $this->objects[] = Reader::read($object);
             } elseif ($object instanceof Component) {
                 $this->objects[] = $object;
@@ -212,7 +212,7 @@ class FreeBusyGenerator {
                                 // instance. We are skipping this event from the output
                                 // entirely.
                                 unset($this->objects[$key]);
-                                continue;
+                                continue 2;
                             }
 
                             if ($this->start) {
