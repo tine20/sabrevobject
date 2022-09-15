@@ -413,6 +413,7 @@ class VCard extends VObject\Document {
      *
      * @return array
      */
+    #[\ReturnTypeWillChange]
     function jsonSerialize() {
 
         // A vcard does not have sub-components, so we're overriding this

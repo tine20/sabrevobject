@@ -328,7 +328,7 @@ class DateTime extends Property {
      * @param mixed $value
      * @return void
      */
-    public function offsetSet($name, $value) {
+    public function offsetSet($name, $value): void {
 
         parent::offsetSet($name, $value);
         if (strtoupper($name)!=='VALUE') {

@@ -294,6 +294,7 @@ abstract class Property extends Node {
      *
      * @return array
      */
+    #[\ReturnTypeWillChange]
     function jsonSerialize() {
 
         $parameters = array();
@@ -344,7 +345,7 @@ abstract class Property extends Node {
      * @param mixed $name
      * @return bool
      */
-    function offsetExists($name) {
+    function offsetExists($name): bool {
 
         if (is_int($name)) return parent::offsetExists($name);
 
@@ -365,6 +366,7 @@ abstract class Property extends Node {
      * @param string $name
      * @return Node
      */
+    #[\ReturnTypeWillChange]
     function offsetGet($name) {
 
         if (is_int($name)) return parent::offsetGet($name);
@@ -385,7 +387,7 @@ abstract class Property extends Node {
      * @param mixed $value
      * @return void
      */
-    function offsetSet($name, $value) {
+    function offsetSet($name, $value): void {
 
         if (is_int($name)) {
             parent::offsetSet($name, $value);
@@ -407,7 +409,7 @@ abstract class Property extends Node {
      * @param string $name
      * @return void
      */
-    function offsetUnset($name) {
+    function offsetUnset($name): void {
 
         if (is_int($name)) {
             parent::offsetUnset($name);

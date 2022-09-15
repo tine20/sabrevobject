@@ -16,3 +16,5 @@ testdata/
 
 # OS X
 .DS_Store
+
+.idea

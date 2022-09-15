@@ -324,6 +324,7 @@ class Component extends Node {
      *
      * @return array
      */
+    #[\ReturnTypeWillChange]
     function jsonSerialize() {
 
         $components = array();

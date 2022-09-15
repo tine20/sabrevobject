@@ -71,6 +71,7 @@ abstract class Node implements \IteratorAggregate, \ArrayAccess, \Countable {
      *
      * @return array
      */
+    #[\ReturnTypeWillChange]
     abstract public function jsonSerialize();
 
     /* {{{ IteratorAggregator interface */
@@ -80,7 +81,7 @@ abstract class Node implements \IteratorAggregate, \ArrayAccess, \Countable {
      *
      * @return ElementList
      */
-    public function getIterator() {
+    public function getIterator(): \Traversable {
 
         if (!is_null($this->iterator))
             return $this->iterator;
@@ -139,7 +140,7 @@ abstract class Node implements \IteratorAggregate, \ArrayAccess, \Countable {
      *
      * @return int
      */
-    public function count() {
+    public function count(): int {
 
         $it = $this->getIterator();
         return $it->count();
@@ -159,7 +160,7 @@ abstract class Node implements \IteratorAggregate, \ArrayAccess, \Countable {
      * @param int $offset
      * @return bool
      */
-    public function offsetExists($offset) {
+    public function offsetExists($offset): bool {
 
         $iterator = $this->getIterator();
         return $iterator->offsetExists($offset);
@@ -174,6 +175,7 @@ abstract class Node implements \IteratorAggregate, \ArrayAccess, \Countable {
      * @param int $offset
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset) {
 
         $iterator = $this->getIterator();
@@ -190,7 +192,7 @@ abstract class Node implements \IteratorAggregate, \ArrayAccess, \Countable {
      * @param mixed $value
      * @return void
      */
-    public function offsetSet($offset, $value) {
+    public function offsetSet($offset, $value): void {
 
         $iterator = $this->getIterator();
         $iterator->offsetSet($offset,$value);
@@ -210,7 +212,7 @@ abstract class Node implements \IteratorAggregate, \ArrayAccess, \Countable {
      * @param int $offset
      * @return void
      */
-    public function offsetUnset($offset) {
+    public function offsetUnset($offset): void {
 
         $iterator = $this->getIterator();
         $iterator->offsetUnset($offset);
