@@ -39,6 +39,7 @@ class RDateIterator implements Iterator {
 
     /* Implementation of the Iterator interface {{{ */
 
+    #[\ReturnTypeWillChange]
     public function current() {
 
         if (!$this->valid()) return null;
@@ -51,6 +52,7 @@ class RDateIterator implements Iterator {
      *
      * @return int
      */
+    #[\ReturnTypeWillChange]
     public function key() {
 
         return $this->counter;
@@ -63,7 +65,7 @@ class RDateIterator implements Iterator {
      *
      * @return bool
      */
-    public function valid() {
+    public function valid(): bool {
 
         return ($this->counter <= count($this->dates));
 
@@ -74,7 +76,7 @@ class RDateIterator implements Iterator {
      *
      * @return void
      */
-    public function rewind() {
+    public function rewind(): void {
 
         $this->currentDate = clone $this->startDate;
         $this->counter = 0;
@@ -86,7 +88,7 @@ class RDateIterator implements Iterator {
      *
      * @return void
      */
-    public function next() {
+    public function next(): void {
 
         $this->counter++;
         if (!$this->valid()) return;

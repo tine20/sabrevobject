@@ -158,7 +158,7 @@ class Text extends Property {
 
         }
 
-        return implode($this->delimiter, $val);
+        return implode((string)$this->delimiter, $val);
 
     }
 

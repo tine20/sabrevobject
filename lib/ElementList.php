@@ -46,6 +46,7 @@ class ElementList implements \Iterator, \Countable, \ArrayAccess {
      *
      * @return Element
      */
+    #[\ReturnTypeWillChange]
     public function current() {
 
         return $this->elements[$this->key];
@@ -57,7 +58,7 @@ class ElementList implements \Iterator, \Countable, \ArrayAccess {
      *
      * @return void
      */
-    public function next() {
+    public function next(): void {
 
         $this->key++;
 
@@ -68,6 +69,7 @@ class ElementList implements \Iterator, \Countable, \ArrayAccess {
      *
      * @return int
      */
+    #[\ReturnTypeWillChange]
     public function key() {
 
         return $this->key;
@@ -79,7 +81,7 @@ class ElementList implements \Iterator, \Countable, \ArrayAccess {
      *
      * @return bool
      */
-    public function valid() {
+    public function valid(): bool {
 
         return isset($this->elements[$this->key]);
 
@@ -90,7 +92,7 @@ class ElementList implements \Iterator, \Countable, \ArrayAccess {
      *
      * @return void
      */
-    public function rewind() {
+    public function rewind(): void {
 
         $this->key = 0;
 

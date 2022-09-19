@@ -206,6 +206,7 @@ class EventIterator implements \Iterator {
      *
      * @return DateTime
      */
+    #[\ReturnTypeWillChange]
     public function current() {
 
         if ($this->currentDate) {
@@ -292,6 +293,7 @@ class EventIterator implements \Iterator {
      *
      * @return int
      */
+    #[\ReturnTypeWillChange]
     public function key() {
 
         // The counter is always 1 ahead.
@@ -305,7 +307,7 @@ class EventIterator implements \Iterator {
      *
      * @return bool
      */
-    public function valid() {
+    public function valid(): bool {
 
         return !!$this->currentDate;
 
@@ -314,7 +316,7 @@ class EventIterator implements \Iterator {
     /**
      * Sets the iterator back to the starting point.
      */
-    public function rewind() {
+    public function rewind(): void {
 
         $this->recurIterator->rewind();
         // re-creating overridden event index.
@@ -340,7 +342,7 @@ class EventIterator implements \Iterator {
      *
      * @return void
      */
-    public function next() {
+    public function next(): void {
 
         $this->currentOverriddenEvent = null;
         $this->counter++;

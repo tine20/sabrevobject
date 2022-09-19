@@ -40,6 +40,7 @@ class RRuleIterator implements Iterator {
 
     /* Implementation of the Iterator interface {{{ */
 
+    #[\ReturnTypeWillChange]
     public function current() {
 
         if (!$this->valid()) return null;
@@ -52,6 +53,7 @@ class RRuleIterator implements Iterator {
      *
      * @return int
      */
+    #[\ReturnTypeWillChange]
     public function key() {
 
         return $this->counter;
@@ -65,7 +67,7 @@ class RRuleIterator implements Iterator {
      *
      * @return bool
      */
-    public function valid() {
+    public function valid(): bool {
 
         if (!is_null($this->count)) {
             return $this->counter < $this->count;
@@ -79,7 +81,7 @@ class RRuleIterator implements Iterator {
      *
      * @return void
      */
-    public function rewind() {
+    public function rewind(): void {
 
         $this->currentDate = clone $this->startDate;
         $this->counter = 0;
@@ -91,7 +93,7 @@ class RRuleIterator implements Iterator {
      *
      * @return void
      */
-    public function next() {
+    public function next(): void {
 
         $previousStamp = $this->currentDate->getTimeStamp();
 
