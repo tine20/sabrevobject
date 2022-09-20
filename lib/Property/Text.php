@@ -144,7 +144,7 @@ class Text extends Property {
 
             foreach($item as &$subItem) {
                 $subItem = strtr(
-                    $subItem,
+                    (string)$subItem,
                     array(
                         '\\' => '\\\\',
                         ';'  => '\;',
