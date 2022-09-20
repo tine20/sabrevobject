@@ -24,7 +24,7 @@ class DateAndOrTime extends Property {
      *
      * @var null|string
      */
-    public $delimiter = null;
+    public $delimiter = '';
 
     /**
      * Returns the type of value.
@@ -273,7 +273,7 @@ class DateAndOrTime extends Property {
      */
     public function getRawMimeDirValue() {
 
-        return implode($this->delimiter, $this->getParts());
+        return implode((string)$this->delimiter, $this->getParts());
 
     }
 

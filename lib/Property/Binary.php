@@ -28,7 +28,7 @@ class Binary extends Property {
      *
      * @var string|null
      */
-    public $delimiter = null;
+    public $delimiter = '';
 
     /**
      * Updates the current value.

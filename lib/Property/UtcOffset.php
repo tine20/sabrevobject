@@ -19,7 +19,7 @@ class UtcOffset extends Text {
      *
      * @var string|null
      */
-    public $delimiter = null;
+    public $delimiter = '';
 
     /**
      * Returns the type of value.
