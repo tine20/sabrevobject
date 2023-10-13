@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\VObject\Property\VCard;
+namespace Tine20\VObject\Property\VCard;
 
 use
-    Sabre\VObject\DateTimeParser,
-    Sabre\VObject\Property\Text;
+    Tine20\VObject\DateTimeParser,
+    Tine20\VObject\Property\Text;
 
 /**
  * TimeStamp property

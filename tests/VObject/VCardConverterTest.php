@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 class VCardConverterTest extends TestCase {
 
@@ -503,7 +503,7 @@ VCF;
 
       $vcard = Reader::read($input);
 
-      $this->assertInstanceOf('Sabre\\VObject\\Component\\VCard', $vcard);
+      $this->assertInstanceOf('Tine20\\VObject\\Component\\VCard', $vcard);
       $vcard = $vcard->convert(Document::VCARD40);
       $vcard = $vcard->serialize();
 

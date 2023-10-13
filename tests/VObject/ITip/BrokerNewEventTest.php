@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\ITip;
+namespace Tine20\VObject\ITip;
 
 class BrokerNewEventTest extends \PHPUnit_Framework_TestCase {
 
@@ -49,7 +49,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
         $expectedMessage = <<<ICS
 BEGIN:VCALENDAR
 VERSION:2.0
@@ -84,7 +84,7 @@ ICS;
     }
 
     /**
-     * @expectedException \Sabre\VObject\ITip\ITipException
+     * @expectedException \Tine20\VObject\ITip\ITipException
      */
     function testBrokenEventUIDMisMatch() {
 
@@ -109,7 +109,7 @@ ICS;
 
     }
     /**
-     * @expectedException \Sabre\VObject\ITip\ITipException
+     * @expectedException \Tine20\VObject\ITip\ITipException
      */
     function testBrokenEventOrganizerMisMatch() {
 
@@ -161,7 +161,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -290,7 +290,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -405,7 +405,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array();
         $result = $this->parse($message, $expected);
@@ -413,7 +413,7 @@ ICS;
     }
 
     /**
-     * @expectedException Sabre\VObject\ITip\ITipException
+     * @expectedException Tine20\VObject\ITip\ITipException
      */
     function testMultipleUID() {
 
@@ -441,13 +441,13 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
         $result = $this->parse($message, array());
 
     }
 
     /**
-     * @expectedException Sabre\VObject\ITip\SameOrganizerForAllComponentsException
+     * @expectedException Tine20\VObject\ITip\SameOrganizerForAllComponentsException
      *
      */
     function testChangingOrganizers() {
@@ -476,7 +476,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
         $result = $this->parse($message, array());
 
     }

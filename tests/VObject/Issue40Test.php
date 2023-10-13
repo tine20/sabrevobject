@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 /**
  * This test is created to handle the issues brought forward by issue 40.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 /**
  * Exception thrown by parser when the end of the stream has been reached,

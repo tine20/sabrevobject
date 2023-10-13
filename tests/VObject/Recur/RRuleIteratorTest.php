@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\Recur;
+namespace Tine20\VObject\Recur;
 
 use DateTime;
 use DateTimeZone;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\ICalendar;
+namespace Tine20\VObject\ICalendar;
 
-use Sabre\VObject\Reader;
+use Tine20\VObject\Reader;
 
 class AttachParseTest extends \PHPUnit_Framework_TestCase {
 
@@ -22,7 +22,7 @@ ICS;
         $vcal = Reader::read($vcal);
         $prop = $vcal->VEVENT->ATTACH;
 
-        $this->assertInstanceOf('Sabre\\VObject\\Property\\URI', $prop);
+        $this->assertInstanceOf('Tine20\\VObject\\Property\\URI', $prop);
         $this->assertEquals('ftp://example.com/pub/reports/r-960812.ps', $prop->getValue());
 
 

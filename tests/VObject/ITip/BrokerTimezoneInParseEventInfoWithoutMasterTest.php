@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\ITip;
+namespace Tine20\VObject\ITip;
 
-use Sabre\VObject\Reader;
+use Tine20\VObject\Reader;
 
 class BrokerTimezoneInParseEventInfoWithoutMasterTest extends \PHPUnit_Framework_TestCase {
 

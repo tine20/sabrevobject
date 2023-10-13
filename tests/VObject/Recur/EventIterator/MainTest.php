@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\VObject\Recur\EventIterator;
+namespace Tine20\VObject\Recur\EventIterator;
 
 use DateTime;
 use DateTimeZone;
-use Sabre\VObject\Recur\EventIterator;
-use Sabre\VObject\Component\VCalendar;
+use Tine20\VObject\Recur\EventIterator;
+use Tine20\VObject\Component\VCalendar;
 
 class MainTest extends \PHPUnit_Framework_TestCase {
 

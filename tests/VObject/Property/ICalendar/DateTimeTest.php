@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Property\ICalendar;
+namespace Tine20\VObject\Property\ICalendar;
 
-use Sabre\VObject\Component;
-use Sabre\VObject\Component\VCalendar;
+use Tine20\VObject\Component;
+use Tine20\VObject\Component\VCalendar;
 
 
 class DateTimeTest extends \PHPUnit_Framework_TestCase {

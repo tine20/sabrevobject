@@ -1,12 +1,12 @@
 <?php
 
-namespace Sabre\VObject\Recur;
+namespace Tine20\VObject\Recur;
 
 use InvalidArgumentException;
 use DateTime;
 use DateTimeZone;
-use Sabre\VObject\Component;
-use Sabre\VObject\Component\VEvent;
+use Tine20\VObject\Component;
+use Tine20\VObject\Component\VEvent;
 
 /**
  * This class is used to determine new for a recurring event, when the next

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\Property;
+namespace Tine20\VObject\Property;
 
-use Sabre\VObject;
+use Tine20\VObject;
 
 class BinaryTest extends \PHPUnit_Framework_TestCase {
 

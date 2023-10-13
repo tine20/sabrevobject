@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Recur\EventIterator;
+namespace Tine20\VObject\Recur\EventIterator;
 
-use Sabre\VObject\Recur;
-use Sabre\VObject\Reader;
+use Tine20\VObject\Recur;
+use Tine20\VObject\Reader;
 
 class FifthTuesdayProblemTest extends \PHPUnit_Framework_TestCase {
 

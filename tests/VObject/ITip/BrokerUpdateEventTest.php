@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\ITip;
+namespace Tine20\VObject\ITip;
 
 class BrokerUpdateTest extends BrokerTester {
 
@@ -41,7 +41,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -167,7 +167,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -232,7 +232,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -291,7 +291,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array();
         $this->parse($oldMessage, $newMessage, $expected, 'mailto:strunk@example.org');
@@ -332,7 +332,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -412,7 +412,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -541,7 +541,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -612,7 +612,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -683,7 +683,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -797,7 +797,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(

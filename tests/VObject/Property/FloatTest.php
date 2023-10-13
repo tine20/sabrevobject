@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\Property;
+namespace Tine20\VObject\Property;
 
-use Sabre\VObject;
+use Tine20\VObject;
 
 class FloatTest extends \PHPUnit_Framework_TestCase {
 
@@ -13,7 +13,7 @@ class FloatTest extends \PHPUnit_Framework_TestCase {
 
         $result = $mimeDir->parse($input);
 
-        $this->assertInstanceOf('Sabre\VObject\Property\FloatValue', $result->{'X-FLOAT'});
+        $this->assertInstanceOf('Tine20\VObject\Property\FloatValue', $result->{'X-FLOAT'});
 
         $this->assertEquals(array(
             0.234,

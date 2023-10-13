@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 use
     DateTime,
@@ -28,7 +28,7 @@ END:VCALENDAR
 ICS;
 
         $vcal = Reader::read($input);
-        $this->assertInstanceOf('Sabre\\VObject\\Component\\VCalendar', $vcal);
+        $this->assertInstanceOf('Tine20\\VObject\\Component\\VCalendar', $vcal);
 
         $it = new Recur\EventIterator($vcal, 'foo');
 

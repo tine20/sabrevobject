@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 class IssueEmptyParameterTest extends \PHPUnit_Framework_TestCase {
 
@@ -18,8 +18,8 @@ VCF;
 
         $vcard = Reader::read($input);
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component\\VCard', $vcard);
-        $vcard = $vcard->convert(\Sabre\VObject\Document::VCARD30);
+        $this->assertInstanceOf('Tine20\\VObject\\Component\\VCard', $vcard);
+        $vcard = $vcard->convert(\Tine20\VObject\Document::VCARD30);
         $vcard = $vcard->serialize();
 
         $converted = Reader::read($vcard);

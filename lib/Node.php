@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 /**
  * A node is the root class for every element in an iCalendar of vCard object.

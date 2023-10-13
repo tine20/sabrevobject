@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 class ElementListTest extends \PHPUnit_Framework_TestCase {
 
@@ -21,7 +21,7 @@ class ElementListTest extends \PHPUnit_Framework_TestCase {
         foreach($elemList as $key=>$subcomponent) {
 
            $count++;
-           $this->assertInstanceOf('Sabre\\VObject\\Component',$subcomponent);
+           $this->assertInstanceOf('Tine20\\VObject\\Component',$subcomponent);
 
         }
         $this->assertEquals(3,$count);

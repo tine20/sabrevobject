@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\VObject\Recur\EventIterator;
+namespace Tine20\VObject\Recur\EventIterator;
 
 use
     DateTime,
     DateTimeZone,
-    Sabre\VObject\Reader;
+    Tine20\VObject\Reader;
 
 class ExpandFloatingTimesTest extends \PHPUnit_Framework_TestCase {
 
@@ -24,7 +24,7 @@ END:VCALENDAR
 ICS;
 
         $vcal = Reader::read($input);
-        $this->assertInstanceOf('Sabre\\VObject\\Component\\VCalendar', $vcal);
+        $this->assertInstanceOf('Tine20\\VObject\\Component\\VCalendar', $vcal);
 
         $vcal->expand(new DateTime('2015-01-01'), new DateTime('2015-01-31'));
 
@@ -79,7 +79,7 @@ END:VCALENDAR
 ICS;
 
         $vcal = Reader::read($input);
-        $this->assertInstanceOf('Sabre\\VObject\\Component\\VCalendar', $vcal);
+        $this->assertInstanceOf('Tine20\\VObject\\Component\\VCalendar', $vcal);
 
         $vcal->expand(new DateTime('2015-01-01'), new DateTime('2015-01-31'), new \DateTimeZone('Europe/Berlin'));
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 class DocumentTest extends \PHPUnit_Framework_TestCase {
 
@@ -24,11 +24,11 @@ class DocumentTest extends \PHPUnit_Framework_TestCase {
 
         $event = $vcal->createComponent('VEVENT');
 
-        $this->assertInstanceOf('Sabre\VObject\Component\VEvent', $event);
+        $this->assertInstanceOf('Tine20\VObject\Component\VEvent', $event);
         $vcal->add($event);
 
         $prop = $vcal->createProperty('X-PROP','1234256',array('X-PARAM' => '3'));
-        $this->assertInstanceOf('Sabre\VObject\Property', $prop);
+        $this->assertInstanceOf('Tine20\VObject\Property', $prop);
 
         $event->add($prop);
 
@@ -47,17 +47,17 @@ class DocumentTest extends \PHPUnit_Framework_TestCase {
         $vcal = new Component\VCalendar(array(), false);
 
         $event = $vcal->create('VEVENT');
-        $this->assertInstanceOf('Sabre\VObject\Component\VEvent', $event);
+        $this->assertInstanceOf('Tine20\VObject\Component\VEvent', $event);
 
         $event = $vcal->create('CALSCALE');
-        $this->assertInstanceOf('Sabre\VObject\Property\Text', $event);
+        $this->assertInstanceOf('Tine20\VObject\Property\Text', $event);
 
     }
 
     function testGetClassNameForPropertyValue() {
 
         $vcal = new Component\VCalendar(array(), false);
-        $this->assertEquals('Sabre\\VObject\\Property\\Text', $vcal->getClassNameForPropertyValue('TEXT'));
+        $this->assertEquals('Tine20\\VObject\\Property\\Text', $vcal->getClassNameForPropertyValue('TEXT'));
         $this->assertNull($vcal->getClassNameForPropertyValue('FOO'));
 
     }

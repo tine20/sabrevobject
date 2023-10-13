@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Recur;
+namespace Tine20\VObject\Recur;
 
-use Sabre\VObject\Recur\EventIterator;
-use Sabre\VObject\Reader;
+use Tine20\VObject\Recur\EventIterator;
+use Tine20\VObject\Reader;
 
 /**
  * Testing case when overridden recurring events have same start date.

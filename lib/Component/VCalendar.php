@@ -1,13 +1,13 @@
 <?php
 
-namespace Sabre\VObject\Component;
+namespace Tine20\VObject\Component;
 
 use DateTime;
 use DateTimeZone;
-use Sabre\VObject;
-use Sabre\VObject\Component;
-use Sabre\VObject\Recur\EventIterator;
-use Sabre\VObject\Recur\NoInstancesException;
+use Tine20\VObject;
+use Tine20\VObject\Component;
+use Tine20\VObject\Recur\EventIterator;
+use Tine20\VObject\Recur\NoInstancesException;
 
 /**
  * The VCalendar component
@@ -35,14 +35,14 @@ class VCalendar extends VObject\Document {
      * @var array
      */
     static $componentMap = array(
-        'VALARM'        => 'Sabre\\VObject\\Component\\VAlarm',
-        'VEVENT'        => 'Sabre\\VObject\\Component\\VEvent',
-        'VFREEBUSY'     => 'Sabre\\VObject\\Component\\VFreeBusy',
-        'VAVAILABILITY' => 'Sabre\\VObject\\Component\\VAvailability',
-        'AVAILABLE'     => 'Sabre\\VObject\\Component\\Available',
-        'VJOURNAL'      => 'Sabre\\VObject\\Component\\VJournal',
-        'VTIMEZONE'     => 'Sabre\\VObject\\Component\\VTimeZone',
-        'VTODO'         => 'Sabre\\VObject\\Component\\VTodo',
+        'VALARM'        => 'Tine20\\VObject\\Component\\VAlarm',
+        'VEVENT'        => 'Tine20\\VObject\\Component\\VEvent',
+        'VFREEBUSY'     => 'Tine20\\VObject\\Component\\VFreeBusy',
+        'VAVAILABILITY' => 'Tine20\\VObject\\Component\\VAvailability',
+        'AVAILABLE'     => 'Tine20\\VObject\\Component\\Available',
+        'VJOURNAL'      => 'Tine20\\VObject\\Component\\VJournal',
+        'VTIMEZONE'     => 'Tine20\\VObject\\Component\\VTimeZone',
+        'VTODO'         => 'Tine20\\VObject\\Component\\VTodo',
     );
 
     /**
@@ -51,21 +51,21 @@ class VCalendar extends VObject\Document {
      * @var array
      */
     static $valueMap = array(
-        'BINARY'           => 'Sabre\\VObject\\Property\\Binary',
-        'BOOLEAN'          => 'Sabre\\VObject\\Property\\Boolean',
-        'CAL-ADDRESS'      => 'Sabre\\VObject\\Property\\ICalendar\\CalAddress',
-        'DATE'             => 'Sabre\\VObject\\Property\\ICalendar\\Date',
-        'DATE-TIME'        => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'DURATION'         => 'Sabre\\VObject\\Property\\ICalendar\\Duration',
-        'FLOAT'            => 'Sabre\\VObject\\Property\\FloatValue',
-        'INTEGER'          => 'Sabre\\VObject\\Property\\IntegerValue',
-        'PERIOD'           => 'Sabre\\VObject\\Property\\ICalendar\\Period',
-        'RECUR'            => 'Sabre\\VObject\\Property\\ICalendar\\Recur',
-        'TEXT'             => 'Sabre\\VObject\\Property\\Text',
-        'TIME'             => 'Sabre\\VObject\\Property\\Time',
-        'UNKNOWN'          => 'Sabre\\VObject\\Property\\Unknown', // jCard / jCal-only.
-        'URI'              => 'Sabre\\VObject\\Property\\Uri',
-        'UTC-OFFSET'       => 'Sabre\\VObject\\Property\\UtcOffset',
+        'BINARY'           => 'Tine20\\VObject\\Property\\Binary',
+        'BOOLEAN'          => 'Tine20\\VObject\\Property\\Boolean',
+        'CAL-ADDRESS'      => 'Tine20\\VObject\\Property\\ICalendar\\CalAddress',
+        'DATE'             => 'Tine20\\VObject\\Property\\ICalendar\\Date',
+        'DATE-TIME'        => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'DURATION'         => 'Tine20\\VObject\\Property\\ICalendar\\Duration',
+        'FLOAT'            => 'Tine20\\VObject\\Property\\FloatValue',
+        'INTEGER'          => 'Tine20\\VObject\\Property\\IntegerValue',
+        'PERIOD'           => 'Tine20\\VObject\\Property\\ICalendar\\Period',
+        'RECUR'            => 'Tine20\\VObject\\Property\\ICalendar\\Recur',
+        'TEXT'             => 'Tine20\\VObject\\Property\\Text',
+        'TIME'             => 'Tine20\\VObject\\Property\\Time',
+        'UNKNOWN'          => 'Tine20\\VObject\\Property\\Unknown', // jCard / jCal-only.
+        'URI'              => 'Tine20\\VObject\\Property\\Uri',
+        'UTC-OFFSET'       => 'Tine20\\VObject\\Property\\UtcOffset',
     );
 
     /**
@@ -75,78 +75,78 @@ class VCalendar extends VObject\Document {
      */
     static $propertyMap = array(
         // Calendar properties
-        'CALSCALE'      => 'Sabre\\VObject\\Property\\FlatText',
-        'METHOD'        => 'Sabre\\VObject\\Property\\FlatText',
-        'PRODID'        => 'Sabre\\VObject\\Property\\FlatText',
-        'VERSION'       => 'Sabre\\VObject\\Property\\FlatText',
+        'CALSCALE'      => 'Tine20\\VObject\\Property\\FlatText',
+        'METHOD'        => 'Tine20\\VObject\\Property\\FlatText',
+        'PRODID'        => 'Tine20\\VObject\\Property\\FlatText',
+        'VERSION'       => 'Tine20\\VObject\\Property\\FlatText',
 
         // Component properties
-        'ATTACH'            => 'Sabre\\VObject\\Property\\Uri',
-        'CATEGORIES'        => 'Sabre\\VObject\\Property\\Text',
-        'CLASS'             => 'Sabre\\VObject\\Property\\FlatText',
-        'COMMENT'           => 'Sabre\\VObject\\Property\\FlatText',
-        'DESCRIPTION'       => 'Sabre\\VObject\\Property\\FlatText',
-        'GEO'               => 'Sabre\\VObject\\Property\\FloatValue',
-        'LOCATION'          => 'Sabre\\VObject\\Property\\FlatText',
-        'PERCENT-COMPLETE'  => 'Sabre\\VObject\\Property\\IntegerValue',
-        'PRIORITY'          => 'Sabre\\VObject\\Property\\IntegerValue',
-        'RESOURCES'         => 'Sabre\\VObject\\Property\\Text',
-        'STATUS'            => 'Sabre\\VObject\\Property\\FlatText',
-        'SUMMARY'           => 'Sabre\\VObject\\Property\\FlatText',
+        'ATTACH'            => 'Tine20\\VObject\\Property\\Uri',
+        'CATEGORIES'        => 'Tine20\\VObject\\Property\\Text',
+        'CLASS'             => 'Tine20\\VObject\\Property\\FlatText',
+        'COMMENT'           => 'Tine20\\VObject\\Property\\FlatText',
+        'DESCRIPTION'       => 'Tine20\\VObject\\Property\\FlatText',
+        'GEO'               => 'Tine20\\VObject\\Property\\FloatValue',
+        'LOCATION'          => 'Tine20\\VObject\\Property\\FlatText',
+        'PERCENT-COMPLETE'  => 'Tine20\\VObject\\Property\\IntegerValue',
+        'PRIORITY'          => 'Tine20\\VObject\\Property\\IntegerValue',
+        'RESOURCES'         => 'Tine20\\VObject\\Property\\Text',
+        'STATUS'            => 'Tine20\\VObject\\Property\\FlatText',
+        'SUMMARY'           => 'Tine20\\VObject\\Property\\FlatText',
 
         // Date and Time Component Properties
-        'COMPLETED'     => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'DTEND'         => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'DUE'           => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'DTSTART'       => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'DURATION'      => 'Sabre\\VObject\\Property\\ICalendar\\Duration',
-        'FREEBUSY'      => 'Sabre\\VObject\\Property\\ICalendar\\Period',
-        'TRANSP'        => 'Sabre\\VObject\\Property\\FlatText',
+        'COMPLETED'     => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'DTEND'         => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'DUE'           => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'DTSTART'       => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'DURATION'      => 'Tine20\\VObject\\Property\\ICalendar\\Duration',
+        'FREEBUSY'      => 'Tine20\\VObject\\Property\\ICalendar\\Period',
+        'TRANSP'        => 'Tine20\\VObject\\Property\\FlatText',
 
         // Time Zone Component Properties
-        'TZID'          => 'Sabre\\VObject\\Property\\FlatText',
-        'TZNAME'        => 'Sabre\\VObject\\Property\\FlatText',
-        'TZOFFSETFROM'  => 'Sabre\\VObject\\Property\\UtcOffset',
-        'TZOFFSETTO'    => 'Sabre\\VObject\\Property\\UtcOffset',
-        'TZURL'         => 'Sabre\\VObject\\Property\\Uri',
+        'TZID'          => 'Tine20\\VObject\\Property\\FlatText',
+        'TZNAME'        => 'Tine20\\VObject\\Property\\FlatText',
+        'TZOFFSETFROM'  => 'Tine20\\VObject\\Property\\UtcOffset',
+        'TZOFFSETTO'    => 'Tine20\\VObject\\Property\\UtcOffset',
+        'TZURL'         => 'Tine20\\VObject\\Property\\Uri',
 
         // Relationship Component Properties
-        'ATTENDEE'      => 'Sabre\\VObject\\Property\\ICalendar\\CalAddress',
-        'CONTACT'       => 'Sabre\\VObject\\Property\\FlatText',
-        'ORGANIZER'     => 'Sabre\\VObject\\Property\\ICalendar\\CalAddress',
-        'RECURRENCE-ID' => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'RELATED-TO'    => 'Sabre\\VObject\\Property\\FlatText',
-        'URL'           => 'Sabre\\VObject\\Property\\Uri',
-        'UID'           => 'Sabre\\VObject\\Property\\FlatText',
+        'ATTENDEE'      => 'Tine20\\VObject\\Property\\ICalendar\\CalAddress',
+        'CONTACT'       => 'Tine20\\VObject\\Property\\FlatText',
+        'ORGANIZER'     => 'Tine20\\VObject\\Property\\ICalendar\\CalAddress',
+        'RECURRENCE-ID' => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'RELATED-TO'    => 'Tine20\\VObject\\Property\\FlatText',
+        'URL'           => 'Tine20\\VObject\\Property\\Uri',
+        'UID'           => 'Tine20\\VObject\\Property\\FlatText',
 
         // Recurrence Component Properties
-        'EXDATE'        => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'RDATE'         => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'RRULE'         => 'Sabre\\VObject\\Property\\ICalendar\\Recur',
-        'EXRULE'        => 'Sabre\\VObject\\Property\\ICalendar\\Recur', // Deprecated since rfc5545
+        'EXDATE'        => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'RDATE'         => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'RRULE'         => 'Tine20\\VObject\\Property\\ICalendar\\Recur',
+        'EXRULE'        => 'Tine20\\VObject\\Property\\ICalendar\\Recur', // Deprecated since rfc5545
 
         // Alarm Component Properties
-        'ACTION'        => 'Sabre\\VObject\\Property\\FlatText',
-        'REPEAT'        => 'Sabre\\VObject\\Property\\IntegerValue',
-        'TRIGGER'       => 'Sabre\\VObject\\Property\\ICalendar\\Duration',
+        'ACTION'        => 'Tine20\\VObject\\Property\\FlatText',
+        'REPEAT'        => 'Tine20\\VObject\\Property\\IntegerValue',
+        'TRIGGER'       => 'Tine20\\VObject\\Property\\ICalendar\\Duration',
 
         // Change Management Component Properties
-        'CREATED'       => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'DTSTAMP'       => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'LAST-MODIFIED' => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'SEQUENCE'      => 'Sabre\\VObject\\Property\\IntegerValue',
+        'CREATED'       => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'DTSTAMP'       => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'LAST-MODIFIED' => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'SEQUENCE'      => 'Tine20\\VObject\\Property\\IntegerValue',
 
         // Request Status
-        'REQUEST-STATUS' => 'Sabre\\VObject\\Property\\Text',
+        'REQUEST-STATUS' => 'Tine20\\VObject\\Property\\Text',
 
         // Additions from draft-daboo-valarm-extensions-04
-        'ALARM-AGENT'    => 'Sabre\\VObject\\Property\\Text',
-        'ACKNOWLEDGED'   => 'Sabre\\VObject\\Property\\ICalendar\\DateTime',
-        'PROXIMITY'      => 'Sabre\\VObject\\Property\\Text',
-        'DEFAULT-ALARM'  => 'Sabre\\VObject\\Property\\Boolean',
+        'ALARM-AGENT'    => 'Tine20\\VObject\\Property\\Text',
+        'ACKNOWLEDGED'   => 'Tine20\\VObject\\Property\\ICalendar\\DateTime',
+        'PROXIMITY'      => 'Tine20\\VObject\\Property\\Text',
+        'DEFAULT-ALARM'  => 'Tine20\\VObject\\Property\\Boolean',
 
         // Additions from draft-daboo-calendar-availability-05
-        'BUSYTYPE'       => 'Sabre\\VObject\\Property\\Text',
+        'BUSYTYPE'       => 'Tine20\\VObject\\Property\\Text',
 
     );
 

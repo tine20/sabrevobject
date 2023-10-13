@@ -1,5 +1,5 @@
 {
-    "name": "sabre/vobject",
+    "name": "tine20/sabrevobject",
     "description" : "The VObject library for PHP allows you to easily parse and manipulate iCalendar and vCard objects",
     "keywords" : [
         "iCalendar",
@@ -68,7 +68,7 @@
     },
     "autoload" : {
         "psr-4" : {
-            "Sabre\\VObject\\" : "lib/"
+            "Tine20\\VObject\\" : "lib/"
         }
     },
     "bin" : [

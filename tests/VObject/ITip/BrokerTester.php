@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\ITip;
+namespace Tine20\VObject\ITip;
 
-use Sabre\VObject\Reader;
+use Tine20\VObject\Reader;
 
 /**
  * Utilities for testing the broker
@@ -11,7 +11,7 @@ use Sabre\VObject\Reader;
  * @author Evert Pot (http://evertpot.com/) 
  * @license http://sabre.io/license/ Modified BSD License
  */
-abstract class BrokerTester extends \Sabre\VObject\TestCase {
+abstract class BrokerTester extends \Tine20\VObject\TestCase {
 
     function parse($oldMessage, $newMessage, $expected = array(), $currentUser = 'mailto:one@example.org') {
 
@@ -43,7 +43,7 @@ abstract class BrokerTester extends \Sabre\VObject\TestCase {
 
     function process($input, $existingObject = null, $expected = false) {
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $vcal = Reader::read($input);
 
@@ -89,7 +89,7 @@ abstract class BrokerTester extends \Sabre\VObject\TestCase {
             $expected = str_replace("\n", "\r\n", $expected);
 
         }
-        if ($result instanceof \Sabre\VObject\Component\VCalendar) {
+        if ($result instanceof \Tine20\VObject\Component\VCalendar) {
             $result = $result->serialize();
             $result = rtrim($result,"\r\n");
         }

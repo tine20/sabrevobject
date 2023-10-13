@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\ITip;
+namespace Tine20\VObject\ITip;
 
 /**
  * This class represents an iTip message
@@ -95,7 +95,7 @@ class Message {
     /**
      * The iCalendar / iTip body.
      *
-     * @var \Sabre\VObject\Component\VCalendar
+     * @var \Tine20\VObject\Component\VCalendar
      */
     public $message;
 
@@ -109,7 +109,7 @@ class Message {
      * normally a ton of messages may be generated for normal calendar use.
      *
      * To see the list of properties that are considered 'significant', check
-     * out Sabre\VObject\ITip\Broker::$significantChangeProperties.
+     * out Tine20\VObject\ITip\Broker::$significantChangeProperties.
      *
      * @var bool
      */

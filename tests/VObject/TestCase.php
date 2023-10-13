@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 class TestCase extends \PHPUnit_Framework_TestCase {
 
@@ -9,7 +9,7 @@ class TestCase extends \PHPUnit_Framework_TestCase {
      * semantically identical.
      *
      * It supports objects being supplied as strings, streams or
-     * Sabre\VObject\Component instances.
+     * Tine20\VObject\Component instances.
      *
      * PRODID is removed from both objects as this is often variable.
      *

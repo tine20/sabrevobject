@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\Property\ICalendar;
+namespace Tine20\VObject\Property\ICalendar;
 
 /**
  * DateTime property

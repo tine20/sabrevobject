@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\Property;
+namespace Tine20\VObject\Property;
 
-use Sabre\VObject\Component\VCard;
+use Tine20\VObject\Component\VCard;
 
 class TextTest extends \PHPUnit_Framework_TestCase {
 
@@ -82,12 +82,12 @@ N:A
 END:VCARD
 IN;
 
-        $vcard = \Sabre\VObject\Reader::read($vcard);
+        $vcard = \Tine20\VObject\Reader::read($vcard);
         $this->assertEquals(1, count($vcard->validate()));
 
         $this->assertEquals(1, count($vcard->N->getParts()));
 
-        $vcard->validate(\Sabre\VObject\Node::REPAIR);
+        $vcard->validate(\Tine20\VObject\Node::REPAIR);
 
         $this->assertEquals(5, count($vcard->N->getParts()));
 

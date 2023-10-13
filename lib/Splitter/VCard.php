@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\VObject\Splitter;
+namespace Tine20\VObject\Splitter;
 
 use
-    Sabre\VObject,
-    Sabre\VObject\Parser\MimeDir;
+    Tine20\VObject,
+    Tine20\VObject\Parser\MimeDir;
 
 /**
  * Splitter
@@ -57,7 +57,7 @@ class VCard implements SplitterInterface {
      *
      * When the end is reached, null will be returned.
      *
-     * @return Sabre\VObject\Component|null
+     * @return Tine20\VObject\Component|null
      */
     public function getNext() {
 

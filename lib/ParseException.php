@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 /**
  * Exception thrown by Reader if an invalid object was attempted to be parsed.

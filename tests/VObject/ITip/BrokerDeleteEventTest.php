@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\ITip;
+namespace Tine20\VObject\ITip;
 
 class BrokerDeleteEventTest extends BrokerTester {
 
@@ -25,7 +25,7 @@ ICS;
 
         $newMessage = null;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -109,7 +109,7 @@ ICS;
 
         $newMessage = null;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -193,7 +193,7 @@ ICS;
 
         $newMessage = null;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -250,7 +250,7 @@ ICS;
 
         $newMessage = null;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -307,7 +307,7 @@ ICS;
 
         $newMessage = null;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array();
 

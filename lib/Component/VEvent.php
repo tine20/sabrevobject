@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\VObject\Component;
+namespace Tine20\VObject\Component;
 
-use Sabre\VObject;
-use Sabre\VObject\Recur\EventIterator;
-use Sabre\VObject\Recur\NoInstancesException;
+use Tine20\VObject;
+use Tine20\VObject\Recur\EventIterator;
+use Tine20\VObject\Recur\NoInstancesException;
 
 /**
  * VEvent component

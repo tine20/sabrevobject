@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\Property\VCard;
+namespace Tine20\VObject\Property\VCard;
 
-use Sabre\VObject;
+use Tine20\VObject;
 
 class LanguageTagTest extends \PHPUnit_Framework_TestCase {
 
@@ -13,7 +13,7 @@ class LanguageTagTest extends \PHPUnit_Framework_TestCase {
 
         $result = $mimeDir->parse($input);
 
-        $this->assertInstanceOf('Sabre\VObject\Property\VCard\LanguageTag', $result->LANG);
+        $this->assertInstanceOf('Tine20\VObject\Property\VCard\LanguageTag', $result->LANG);
 
         $this->assertEquals('nl', $result->LANG->getValue());
 
@@ -31,7 +31,7 @@ class LanguageTagTest extends \PHPUnit_Framework_TestCase {
 
         $result = $mimeDir->parse($input);
 
-        $this->assertInstanceOf('Sabre\VObject\Property\VCard\LanguageTag', $result->LANG);
+        $this->assertInstanceOf('Tine20\VObject\Property\VCard\LanguageTag', $result->LANG);
         // This replicates what the vcard converter does and triggered a bug in
         // the past.
         $result->LANG->setValue(array('de'));

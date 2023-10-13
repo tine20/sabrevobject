@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 /**
  * Google produces vcards with a weird escaping of urls.

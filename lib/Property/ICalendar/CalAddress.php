@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Property\ICalendar;
+namespace Tine20\VObject\Property\ICalendar;
 
 use
-    Sabre\VObject\Property\Text;
+    Tine20\VObject\Property\Text;
 
 /**
  * CalAddress property
