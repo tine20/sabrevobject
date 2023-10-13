@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\Property;
+namespace Tine20\VObject\Property;
 
-use Sabre\VObject\Property;
+use Tine20\VObject\Property;
 
 /**
  * URI property

@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Component;
+namespace Tine20\VObject\Component;
 
 use DateTimeZone;
-use Sabre\VObject;
+use Tine20\VObject;
 
 class VCalendarTest extends \PHPUnit_Framework_TestCase {
 

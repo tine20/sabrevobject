@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\VObject\Property;
+namespace Tine20\VObject\Property;
 
 use
     LogicException,
-    Sabre\VObject\Property;
+    Tine20\VObject\Property;
 
 /**
  * BINARY property

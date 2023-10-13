@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\VObject\Component;
+namespace Tine20\VObject\Component;
 
 use
-    Sabre\VObject\Component,
-    Sabre\VObject\Reader;
+    Tine20\VObject\Component,
+    Tine20\VObject\Reader;
 
 class VTodoTest extends \PHPUnit_Framework_TestCase {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\Property\ICalendar;
+namespace Tine20\VObject\Property\ICalendar;
 
 class CalAddressTest extends \PHPUnit_Framework_TestCase {
 
@@ -9,7 +9,7 @@ class CalAddressTest extends \PHPUnit_Framework_TestCase {
      */
     function testGetNormalizedValue($expected, $input) {
 
-        $vobj = new \Sabre\VObject\Component\VCalendar();
+        $vobj = new \Tine20\VObject\Component\VCalendar();
         $property = $vobj->add('ATTENDEE', $input);
 
         $this->assertEquals(

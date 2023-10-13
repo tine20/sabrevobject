@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\RecurrenceIterator;
+namespace Tine20\VObject\RecurrenceIterator;
 
-use Sabre\VObject\Reader;
+use Tine20\VObject\Reader;
 use DateTime;
 
 class OverrideFirstEventTest extends \PHPUnit_Framework_TestCase {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 class Issue96Test extends \PHPUnit_Framework_TestCase {
 
@@ -16,7 +16,7 @@ END:VCARD
 VCF;
 
         $vcard = Reader::read($input, Reader::OPTION_FORGIVING);
-        $this->assertInstanceOf('Sabre\\VObject\\Component\\VCard', $vcard);
+        $this->assertInstanceOf('Tine20\\VObject\\Component\\VCard', $vcard);
         $this->assertEquals("http://www.example.org", $vcard->url->getValue());
 
     }

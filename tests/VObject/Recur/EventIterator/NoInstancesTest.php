@@ -1,14 +1,14 @@
 <?php
 
-namespace Sabre\VObject\Recur;
+namespace Tine20\VObject\Recur;
 
 use
-    Sabre\VObject\Reader;
+    Tine20\VObject\Reader;
 
 class IssueEXDATETest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @expectedException \Sabre\VObject\Recur\NoInstancesException
+     * @expectedException \Tine20\VObject\Recur\NoInstancesException
      */
     function testRecurrence() {
 
@@ -31,7 +31,7 @@ END:VCALENDAR
 ICS;
 
         $vcal = Reader::read($input);
-        $this->assertInstanceOf('Sabre\\VObject\\Component\\VCalendar', $vcal);
+        $this->assertInstanceOf('Tine20\\VObject\\Component\\VCalendar', $vcal);
 
         $it = new EventIterator($vcal, 'foo');
 

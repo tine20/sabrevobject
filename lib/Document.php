@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 /**
  * Document
@@ -164,7 +164,7 @@ abstract class Document extends Component {
     public function createComponent($name, array $children = null, $defaults = true) {
 
         $name = strtoupper($name);
-        $class = 'Sabre\\VObject\\Component';
+        $class = 'Tine20\\VObject\\Component';
 
         if (isset(static::$componentMap[$name])) {
             $class=static::$componentMap[$name];
@@ -253,7 +253,7 @@ abstract class Document extends Component {
         if (isset(static::$propertyMap[$propertyName])) {
             return static::$propertyMap[$propertyName];
         } else {
-            return 'Sabre\\VObject\\Property\\Unknown';
+            return 'Tine20\\VObject\\Property\\Unknown';
         }
 
     }

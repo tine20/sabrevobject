@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 /**
  * Time zone name translation
@@ -118,7 +118,7 @@ class TimeZoneUtil {
      * exception if we cannot accurately determine the timezone.
      *
      * @param string $tzid
-     * @param Sabre\VObject\Component $vcalendar
+     * @param Tine20\VObject\Component $vcalendar
      * @return DateTimeZone
      */
     static public function getTimeZone($tzid, Component $vcalendar = null, $failIfUncertain = false) {

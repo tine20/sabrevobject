@@ -1,12 +1,12 @@
 <?php
 
-namespace Sabre\VObject\Recur\EventIterator;
+namespace Tine20\VObject\Recur\EventIterator;
 
 use
     DateTime,
     DateTimeZone,
-    Sabre\VObject\Component\VCalendar,
-    Sabre\VObject\Recur;
+    Tine20\VObject\Component\VCalendar,
+    Tine20\VObject\Recur;
 
 class EventIteratorInfiniteLoopProblemTest extends \PHPUnit_Framework_TestCase {
 

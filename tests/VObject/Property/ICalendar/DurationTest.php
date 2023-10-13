@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Property\ICalendar;
+namespace Tine20\VObject\Property\ICalendar;
 
-use Sabre\VObject\Component\VCalendar;
-use Sabre\VObject\Component\VEvent;
+use Tine20\VObject\Component\VCalendar;
+use Tine20\VObject\Component\VEvent;
 
 class DurationTest extends \PHPUnit_Framework_TestCase {
 

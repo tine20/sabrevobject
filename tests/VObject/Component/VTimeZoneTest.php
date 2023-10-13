@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Component;
+namespace Tine20\VObject\Component;
 
-use Sabre\VObject;
-use Sabre\VObject\Reader;
+use Tine20\VObject;
+use Tine20\VObject\Reader;
 
 class VTimeZoneTest extends \PHPUnit_Framework_TestCase {
 

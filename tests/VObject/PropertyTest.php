@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 use
-    Sabre\VObject\Component\VCalendar,
-    Sabre\VObject\Component\VCard;
+    Tine20\VObject\Component\VCalendar,
+    Tine20\VObject\Component\VCard;
 
 class PropertyTest extends \PHPUnit_Framework_TestCase {
 
@@ -66,7 +66,7 @@ class PropertyTest extends \PHPUnit_Framework_TestCase {
         $property = $cal->createProperty('propname','propvalue');
         $property['paramname'] = 'paramvalue';
 
-        $this->assertInstanceOf('Sabre\\VObject\\Parameter',$property['paramname']);
+        $this->assertInstanceOf('Tine20\\VObject\\Parameter',$property['paramname']);
 
     }
 
@@ -87,7 +87,7 @@ class PropertyTest extends \PHPUnit_Framework_TestCase {
         $property['paramname'] = 'paramvalue';
         $property->add('paramname', 'paramvalue');
 
-        $this->assertInstanceOf('Sabre\\VObject\\Parameter',$property['paramname']);
+        $this->assertInstanceOf('Tine20\\VObject\\Parameter',$property['paramname']);
         $this->assertEquals(2,count($property['paramname']->getParts()));
 
     }
@@ -99,7 +99,7 @@ class PropertyTest extends \PHPUnit_Framework_TestCase {
         $property['paramname'] = 'paramvalue';
 
         $this->assertEquals(1,count($property->parameters()));
-        $this->assertInstanceOf('Sabre\\VObject\\Parameter', $property->parameters['PARAMNAME']);
+        $this->assertInstanceOf('Tine20\\VObject\\Parameter', $property->parameters['PARAMNAME']);
         $this->assertEquals('PARAMNAME',$property->parameters['PARAMNAME']->name);
         $this->assertEquals('paramvalue',$property->parameters['PARAMNAME']->getValue());
 

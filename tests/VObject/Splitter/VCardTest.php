@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\Splitter;
+namespace Tine20\VObject\Splitter;
 
-use Sabre\VObject;
+use Tine20\VObject;
 
 class VCardTest extends \PHPUnit_Framework_TestCase {
 
@@ -34,7 +34,7 @@ EOT;
     }
 
     /**
-     * @expectedException Sabre\VObject\ParseException
+     * @expectedException Tine20\VObject\ParseException
      */
     function testVCardImportWrongType() {
         $event[] = <<<EOT
@@ -117,7 +117,7 @@ EOT;
     }
 
     /**
-     * @expectedException \Sabre\VObject\ParseException
+     * @expectedException \Tine20\VObject\ParseException
      */
     function testVCardImportCheckInvalidArgumentException() {
         $data = <<<EOT

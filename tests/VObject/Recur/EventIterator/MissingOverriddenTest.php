@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\VObject\Recur\EventIterator;
+namespace Tine20\VObject\Recur\EventIterator;
 
 use
     DateTime,
     DateTimeZone,
-    Sabre\VObject\Reader;
+    Tine20\VObject\Reader;
 
 class RecurrenceIteratorMissingOverriddenTest extends \PHPUnit_Framework_TestCase {
 
@@ -32,7 +32,7 @@ END:VCALENDAR
 ICS;
 
         $vcal = Reader::read($input);
-        $this->assertInstanceOf('Sabre\\VObject\\Component\\VCalendar', $vcal);
+        $this->assertInstanceOf('Tine20\\VObject\\Component\\VCalendar', $vcal);
 
         $vcal->expand(new DateTime('2011-01-01'), new DateTime('2015-01-01'));
 

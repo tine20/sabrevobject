@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\ITip;
+namespace Tine20\VObject\ITip;
 
 class BrokerAttendeeReplyTest extends BrokerTester {
 
@@ -35,7 +35,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -143,7 +143,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -286,7 +286,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-    $version = \Sabre\VObject\Version::VERSION;
+    $version = \Tine20\VObject\Version::VERSION;
 
     $expected = array(
         array(
@@ -418,7 +418,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
         $expected = array(
             array(
                 'uid' => 'foobar',
@@ -524,7 +524,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
         $expected = array(
             array(
                 'uid' => 'foobar',
@@ -595,7 +595,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
         $expected = array(
             array(
                 'uid' => 'foobar',
@@ -665,7 +665,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
         $expected = array(
             array(
                 'uid' => 'foobar',
@@ -728,7 +728,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -794,7 +794,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array();
 
@@ -852,7 +852,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
         $expected = array();
 
         $result = $this->parse($oldMessage, $newMessage, $expected);
@@ -888,7 +888,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array();
         $result = $this->parse($oldMessage, $newMessage, $expected);
@@ -924,7 +924,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -999,7 +999,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(
@@ -1091,7 +1091,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION;
+        $version = \Tine20\VObject\Version::VERSION;
 
         $expected = array(
             array(

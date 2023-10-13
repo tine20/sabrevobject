@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 class LineFoldingIssueTest extends \PHPUnit_Framework_TestCase {
 

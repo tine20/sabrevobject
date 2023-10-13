@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 use DateTimeZone;
-use Sabre\VObject\Component\VCalendar;
-use Sabre\VObject\Recur\EventIterator;
-use Sabre\VObject\Recur\NoInstancesException;
+use Tine20\VObject\Component\VCalendar;
+use Tine20\VObject\Recur\EventIterator;
+use Tine20\VObject\Recur\NoInstancesException;
 
 /**
  * This class helps with generating FREEBUSY reports based on existing sets of
@@ -135,7 +135,7 @@ class FreeBusyGenerator {
             } elseif ($object instanceof Component) {
                 $this->objects[] = $object;
             } else {
-                throw new \InvalidArgumentException('You can only pass strings or \\Sabre\\VObject\\Component arguments to setObjects');
+                throw new \InvalidArgumentException('You can only pass strings or \\Tine20\\VObject\\Component arguments to setObjects');
             }
 
         }

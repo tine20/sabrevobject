@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Property;
+namespace Tine20\VObject\Property;
 
 use
-    Sabre\VObject\Property;
+    Tine20\VObject\Property;
 
 /**
  * Integer property

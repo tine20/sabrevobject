@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\VObject\Component;
+namespace Tine20\VObject\Component;
 
-use Sabre\VObject;
-use Sabre\VObject\Reader;
-use Sabre\VObject\Component;
-use Sabre\VObject\Component\VAvailability;
+use Tine20\VObject;
+use Tine20\VObject\Reader;
+use Tine20\VObject\Component;
+use Tine20\VObject\Component\VAvailability;
 
 /**
  * We use `RFCxxx` has a placeholder for the

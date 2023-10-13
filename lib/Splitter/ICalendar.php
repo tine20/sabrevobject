@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\VObject\Splitter;
+namespace Tine20\VObject\Splitter;
 
 use
-    Sabre\VObject,
-    Sabre\VObject\Component\VCalendar;
+    Tine20\VObject,
+    Tine20\VObject\Component\VCalendar;
 
 /**
  * Splitter
@@ -87,7 +87,7 @@ class ICalendar implements SplitterInterface {
      *
      * When the end is reached, null will be returned.
      *
-     * @return Sabre\VObject\Component|null
+     * @return Tine20\VObject\Component|null
      */
     public function getNext() {
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\VObject\ITip;
+namespace Tine20\VObject\ITip;
 
-use Sabre\VObject\Component\VCalendar;
-use Sabre\VObject\DateTimeParser;
-use Sabre\VObject\Reader;
-use Sabre\VObject\Recur\EventIterator;
+use Tine20\VObject\Component\VCalendar;
+use Tine20\VObject\DateTimeParser;
+use Tine20\VObject\Reader;
+use Tine20\VObject\Recur\EventIterator;
 
 /**
  * The ITip\Broker class is a utility class that helps with processing

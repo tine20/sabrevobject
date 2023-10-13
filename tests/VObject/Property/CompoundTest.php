@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\Property;
+namespace Tine20\VObject\Property;
 
-use Sabre\VObject\Component\VCard;
+use Tine20\VObject\Component\VCard;
 
 class CompoundTest extends \PHPUnit_Framework_TestCase {
 

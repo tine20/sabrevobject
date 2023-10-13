@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\Parser;
+namespace Tine20\VObject\Parser;
 
 /**
  * Abstract parser.

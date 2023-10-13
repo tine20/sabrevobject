@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Parser;
+namespace Tine20\VObject\Parser;
 
 use
-    Sabre\VObject\Reader;
+    Tine20\VObject\Reader;
 
 class QuotedPrintableTest extends \PHPUnit_Framework_TestCase {
 
@@ -13,7 +13,7 @@ class QuotedPrintableTest extends \PHPUnit_Framework_TestCase {
 
         $result = Reader::read($data);
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCARD', $result->name);
         $this->assertEquals(1, count($result->children()));
         $this->assertEquals("Aachen", $this->getPropertyValue($result->label));
@@ -25,7 +25,7 @@ class QuotedPrintableTest extends \PHPUnit_Framework_TestCase {
         $data = "BEGIN:VCARD\r\nLABEL;ENCODING=QUOTED-PRINTABLE:Aa=\r\n ch=\r\n en\r\nEND:VCARD";
         $result = Reader::read($data);
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCARD', $result->name);
         $this->assertEquals(1, count($result->children()));
         $this->assertEquals("Aachen", $this->getPropertyValue($result->label));
@@ -37,7 +37,7 @@ class QuotedPrintableTest extends \PHPUnit_Framework_TestCase {
         $data = "BEGIN:VCARD\r\nLABEL;ENCODING=QUOTED-PRINTABLE:Aachen=0D=0A=\r\n Germany\r\nEND:VCARD";
         $result = Reader::read($data);
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCARD', $result->name);
         $this->assertEquals(1, count($result->children()));
         $this->assertEquals("Aachen\r\nGermany", $this->getPropertyValue($result->label));
@@ -50,7 +50,7 @@ class QuotedPrintableTest extends \PHPUnit_Framework_TestCase {
         $data = "BEGIN:VCARD\r\nLABEL;ENCODING=QUOTED-PRINTABLE:Aachen=0D=0A=\r\nDeutschland:okay\r\nEND:VCARD";
         $result = Reader::read($data, Reader::OPTION_FORGIVING);
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCARD', $result->name);
         $this->assertEquals(1, count($result->children()));
         $this->assertEquals("Aachen\r\nDeutschland:okay", $this->getPropertyValue($result->label));
@@ -77,7 +77,7 @@ VCF;
 
     }
 
-    private function getPropertyValue(\Sabre\VObject\Property $property) {
+    private function getPropertyValue(\Tine20\VObject\Property $property) {
 
         return (string)$property;
 

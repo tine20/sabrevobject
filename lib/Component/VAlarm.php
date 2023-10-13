@@ -1,7 +1,7 @@
 <?php
 
-namespace Sabre\VObject\Component;
-use Sabre\VObject;
+namespace Tine20\VObject\Component;
+use Tine20\VObject;
 
 /**
  * VAlarm component

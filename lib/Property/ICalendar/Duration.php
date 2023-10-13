@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\VObject\Property\ICalendar;
+namespace Tine20\VObject\Property\ICalendar;
 
 use
-    Sabre\VObject\Property,
-    Sabre\VObject\Parser\MimeDir,
-    Sabre\VObject\DateTimeParser;
+    Tine20\VObject\Property,
+    Tine20\VObject\Parser\MimeDir,
+    Tine20\VObject\DateTimeParser;
 
 /**
  * Duration property

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 /**
  * Component
@@ -125,7 +125,7 @@ class Component extends Node {
 
         } else {
 
-            throw new \InvalidArgumentException('The first argument must either be a \\Sabre\\VObject\\Node or a string');
+            throw new \InvalidArgumentException('The first argument must either be a \\Tine20\\VObject\\Node or a string');
 
         }
 

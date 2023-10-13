@@ -1,12 +1,12 @@
 <?php
 
-namespace Sabre\VObject\Parser;
+namespace Tine20\VObject\Parser;
 
 use
-    Sabre\VObject\Component\VCalendar,
-    Sabre\VObject\Component\VCard,
-    Sabre\VObject\ParseException,
-    Sabre\VObject\EofException;
+    Tine20\VObject\Component\VCalendar,
+    Tine20\VObject\Component\VCard,
+    Tine20\VObject\ParseException,
+    Tine20\VObject\EofException;
 
 /**
  * Json Parser.
@@ -87,7 +87,7 @@ class Json extends Parser {
      * Parses a component
      *
      * @param array $jComp
-     * @return \Sabre\VObject\Component
+     * @return \Tine20\VObject\Component
      */
     public function parseComponent(array $jComp) {
 
@@ -124,7 +124,7 @@ class Json extends Parser {
      * Parses properties.
      *
      * @param array $jProp
-     * @return \Sabre\VObject\Property
+     * @return \Tine20\VObject\Property
      */
     public function parseProperty(array $jProp) {
 
@@ -158,8 +158,8 @@ class Json extends Parser {
         // represents TEXT values. We have to normalize these here. In the
         // future we can get rid of FlatText once we're allowed to break BC
         // again.
-        if ($defaultPropertyClass === 'Sabre\VObject\Property\FlatText') {
-            $defaultPropertyClass = 'Sabre\VObject\Property\Text';
+        if ($defaultPropertyClass === 'Tine20\VObject\Property\FlatText') {
+            $defaultPropertyClass = 'Tine20\VObject\Property\Text';
         }
 
         // If the value type we received (e.g.: TEXT) was not the default value

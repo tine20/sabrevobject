@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 class ReaderTest extends \PHPUnit_Framework_TestCase {
 
@@ -10,7 +10,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = Reader::read($data);
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCALENDAR', $result->name);
         $this->assertEquals(0, count($result->children));
 
@@ -25,7 +25,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = Reader::read($stream);
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCALENDAR', $result->name);
         $this->assertEquals(0, count($result->children));
 
@@ -37,7 +37,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = Reader::read($data);
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCALENDAR', $result->name);
         $this->assertEquals(0, count($result->children));
 
@@ -49,14 +49,14 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = Reader::read($data);
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCALENDAR', $result->name);
         $this->assertEquals(0, count($result->children));
 
     }
 
     /**
-     * @expectedException Sabre\VObject\ParseException
+     * @expectedException Tine20\VObject\ParseException
      */
     function testReadCorruptComponent() {
 
@@ -67,7 +67,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException Sabre\VObject\ParseException
+     * @expectedException Tine20\VObject\ParseException
      */
     function testReadCorruptSubComponent() {
 
@@ -83,7 +83,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
         $result = Reader::read($data);
 
         $result = $result->SUMMARY;
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('SUMMARY', $result->name);
         $this->assertEquals('propValue', $result->getValue());
 
@@ -95,7 +95,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
         $result = Reader::read($data);
 
         $result = $result->SUMMARY;
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('SUMMARY', $result->name);
         $this->assertEquals("Line1\nLine2\nLine3\\Not the 4th line!", $result->getValue());
 
@@ -107,7 +107,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
         $result = Reader::read($data);
 
         $result = $result->DTSTART;
-        $this->assertInstanceOf('Sabre\\VObject\\Property\\ICalendar\\DateTime', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property\\ICalendar\\DateTime', $result);
         $this->assertEquals('DTSTART', $result->name);
         $this->assertEquals('20110529', $result->getValue());
 
@@ -119,14 +119,14 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
         $result = Reader::read($data);
 
         $result = $result->DTSTART;
-        $this->assertInstanceOf('Sabre\\VObject\\Property\\ICalendar\\DateTime', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property\\ICalendar\\DateTime', $result);
         $this->assertEquals('DTSTART', $result->name);
         $this->assertEquals('20110529', $result->getValue());
 
     }
 
     /**
-     * @expectedException Sabre\VObject\ParseException
+     * @expectedException Tine20\VObject\ParseException
      */
     function testReadBrokenLine() {
 
@@ -145,10 +145,10 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = Reader::read(implode("\r\n",$data));
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCALENDAR', $result->name);
         $this->assertEquals(1, count($result->children()));
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result->children[0]);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result->children[0]);
         $this->assertEquals('PROPNAME', $result->children[0]->name);
         $this->assertEquals('propValue', $result->children[0]->getValue());
 
@@ -167,13 +167,13 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = Reader::read(implode("\r\n",$data));
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCALENDAR', $result->name);
         $this->assertEquals(1, count($result->children()));
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result->children[0]);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result->children[0]);
         $this->assertEquals('VTIMEZONE', $result->children[0]->name);
         $this->assertEquals(1, count($result->children[0]->children()));
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result->children[0]->children[0]);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result->children[0]->children[0]);
         $this->assertEquals('DAYLIGHT', $result->children[0]->children[0]->name);
 
 
@@ -186,7 +186,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = $result->PROPNAME;
 
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('PROPNAME', $result->name);
         $this->assertEquals('propValue', $result->getValue());
         $this->assertEquals(1, count($result->parameters()));
@@ -202,7 +202,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = $result->PROPNAME;
 
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('PROPNAME', $result->name);
         $this->assertEquals('propValue', $result->getValue());
         $this->assertEquals(1, count($result->parameters()));
@@ -218,7 +218,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = $result->PROPNAME;
 
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('PROPNAME', $result->name);
         $this->assertEquals('propValue', $result->getValue());
         $this->assertEquals(1, count($result->parameters()));
@@ -235,7 +235,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = $result->PROPNAME;
 
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('PROPNAME', $result->name);
         $this->assertEquals('propValue', $result->getValue());
         $this->assertEquals(1, count($result->parameters()));
@@ -252,7 +252,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = $result->PROPNAME;
 
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('PROPNAME', $result->name);
         $this->assertEquals('propValue:anotherrandomstring', $result->getValue());
         $this->assertEquals(1, count($result->parameters()));
@@ -268,7 +268,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = $result->PROPNAME;
 
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('PROPNAME', $result->name);
         $this->assertEquals('propValue', $result->getValue());
         $this->assertEquals(2, count($result->parameters()));
@@ -286,7 +286,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = $result->PROPNAME;
 
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('PROPNAME', $result->name);
         $this->assertEquals('propValue', $result->getValue());
         $this->assertEquals(1, count($result->parameters()));
@@ -302,7 +302,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
 
         $result = $result->propname;
 
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('PROPNAME', $result->name);
         $this->assertEquals('propValue', $result->getValue());
 
@@ -318,7 +318,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
         $result = Reader::read($data);
         $result = $result->propname;
 
-        $this->assertInstanceOf('Sabre\\VObject\\Property', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Property', $result);
         $this->assertEquals('PROPNAME', $result->name);
         $this->assertEquals('propValue', $result->getValue());
         $this->assertEquals(1, count($result->parameters()));
@@ -391,7 +391,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase {
     /**
      * Reported as Issue 32.
      *
-     * @expectedException \Sabre\VObject\ParseException
+     * @expectedException \Tine20\VObject\ParseException
      */
     public function testReadIncompleteFile() {
 
@@ -440,7 +440,7 @@ ICS;
         $data = chr(0xef) . chr(0xbb) . chr(0xbf) . "BEGIN:VCALENDAR\r\nEND:VCALENDAR";
         $result = Reader::read($data);
 
-        $this->assertInstanceOf('Sabre\\VObject\\Component', $result);
+        $this->assertInstanceOf('Tine20\\VObject\\Component', $result);
         $this->assertEquals('VCALENDAR', $result->name);
         $this->assertEquals(0, count($result->children));
 

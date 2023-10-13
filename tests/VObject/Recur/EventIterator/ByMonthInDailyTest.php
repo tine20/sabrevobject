@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Recur;
+namespace Tine20\VObject\Recur;
 
 use
-    Sabre\VObject\Reader,
+    Tine20\VObject\Reader,
     DateTime;
 
 class ByMonthInDailyTest extends \PHPUnit_Framework_TestCase {
@@ -36,7 +36,7 @@ END:VCALENDAR
 ICS;
 
         $vcal = Reader::read($ics);
-        $this->assertInstanceOf('Sabre\\VObject\\Component\\VCalendar', $vcal);
+        $this->assertInstanceOf('Tine20\\VObject\\Component\\VCalendar', $vcal);
 
         $vcal->expand(new DateTime('2013-09-28'), new DateTime('2014-09-11'));
 

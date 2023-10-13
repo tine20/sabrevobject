@@ -1,8 +1,8 @@
 <?php
 
-namespace Sabre\VObject\Property\ICalendar;
+namespace Tine20\VObject\Property\ICalendar;
 
-use Sabre\VObject\Component\VCalendar;
+use Tine20\VObject\Component\VCalendar;
 
 class RecurTest extends \PHPUnit_Framework_TestCase {
 
@@ -11,7 +11,7 @@ class RecurTest extends \PHPUnit_Framework_TestCase {
         $vcal = new VCalendar();
         $recur = $vcal->add('RRULE', 'FREQ=Daily');
 
-        $this->assertInstanceOf('Sabre\VObject\Property\ICalendar\Recur', $recur);
+        $this->assertInstanceOf('Tine20\VObject\Property\ICalendar\Recur', $recur);
 
         $this->assertEquals(array('FREQ'=>'DAILY'), $recur->getParts());
         $recur->setParts(array('freq'=>'MONTHLY'));

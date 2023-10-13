@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 class Issue36WorkAroundTest extends \PHPUnit_Framework_TestCase {
 
@@ -32,7 +32,7 @@ ICS;
 
         // If this does not throw an exception, it's all good.
         $it = new Recur\EventIterator($obj,'1833bd44-188b-405c-9f85-1a12105318aa');
-        $this->assertInstanceOf('Sabre\\VObject\\Recur\EventIterator', $it);
+        $this->assertInstanceOf('Tine20\\VObject\\Recur\EventIterator', $it);
 
     }
 

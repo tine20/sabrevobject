@@ -1,11 +1,11 @@
 <?php
 
-namespace Sabre\VObject\Property\ICalendar;
+namespace Tine20\VObject\Property\ICalendar;
 
 use DateTimeZone;
-use Sabre\VObject\Property;
-use Sabre\VObject\DateTimeParser;
-use Sabre\VObject\TimeZoneUtil;
+use Tine20\VObject\Property;
+use Tine20\VObject\DateTimeParser;
+use Tine20\VObject\TimeZoneUtil;
 
 /**
  * DateTime property

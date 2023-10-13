@@ -1,9 +1,9 @@
 <?php
 
-namespace Sabre\VObject\Parser;
+namespace Tine20\VObject\Parser;
 
 use
-    Sabre\VObject;
+    Tine20\VObject;
 
 class JsonTest extends \PHPUnit_Framework_TestCase {
 
@@ -375,7 +375,7 @@ VCF;
     }
 
     /**
-     * @expectedException \Sabre\VObject\ParseException
+     * @expectedException \Tine20\VObject\ParseException
      */
     function testParseInvalidData() {
 

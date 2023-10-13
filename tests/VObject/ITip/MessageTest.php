@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\ITip;
+namespace Tine20\VObject\ITip;
 
 class MessageTest extends \PHPUnit_Framework_TestCase {
 

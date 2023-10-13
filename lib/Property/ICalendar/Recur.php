@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\VObject\Property\ICalendar;
+namespace Tine20\VObject\Property\ICalendar;
 
 use
-    Sabre\VObject\Property,
-    Sabre\VObject\Parser\MimeDir;
+    Tine20\VObject\Property,
+    Tine20\VObject\Parser\MimeDir;
 
 /**
  * Recur property

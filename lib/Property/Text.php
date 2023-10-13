@@ -1,12 +1,12 @@
 <?php
 
-namespace Sabre\VObject\Property;
+namespace Tine20\VObject\Property;
 
 use
-    Sabre\VObject\Property,
-    Sabre\VObject\Component,
-    Sabre\VObject\Parser\MimeDir,
-    Sabre\VObject\Document;
+    Tine20\VObject\Property,
+    Tine20\VObject\Component,
+    Tine20\VObject\Parser\MimeDir,
+    Tine20\VObject\Document;
 
 /**
  * Text property

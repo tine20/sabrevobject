@@ -1,10 +1,10 @@
 <?php
 
-namespace Sabre\VObject\Property\VCard;
+namespace Tine20\VObject\Property\VCard;
 
 use
-    Sabre\VObject,
-    Sabre\VObject\Reader;
+    Tine20\VObject,
+    Tine20\VObject\Reader;
 
 class DateAndOrTimeTest extends \PHPUnit_Framework_TestCase {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
 /**
  * This issue was pointed out in Issue 55. \r should be stripped completely 

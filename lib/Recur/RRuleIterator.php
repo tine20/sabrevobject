@@ -1,12 +1,12 @@
 <?php
 
-namespace Sabre\VObject\Recur;
+namespace Tine20\VObject\Recur;
 
 use DateTime;
 use InvalidArgumentException;
 use Iterator;
-use Sabre\VObject\DateTimeParser;
-use Sabre\VObject\Property;
+use Tine20\VObject\DateTimeParser;
+use Tine20\VObject\Property;
 
 
 /**

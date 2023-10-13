@@ -1,13 +1,13 @@
 <?php
 
-namespace Sabre\VObject;
+namespace Tine20\VObject;
 
-use Sabre\VObject\Recur\EventIterator;
+use Tine20\VObject\Recur\EventIterator;
 
 /**
  * RecurrenceIterator
  *
- * This class is deprecated. Use Sabre\VObject\Recur\EventIterator instead.
+ * This class is deprecated. use Tine20\VObject\Recur\EventIterator instead.
  * This class will be removed from a future version.
  *
  * @copyright Copyright (C) fruux GmbH (https://fruux.com/)

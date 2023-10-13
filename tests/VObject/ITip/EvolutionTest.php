@@ -1,6 +1,6 @@
 <?php
 
-namespace Sabre\VObject\ITip;
+namespace Tine20\VObject\ITip;
 
 class EvolutionTest extends BrokerTester {
 
@@ -866,7 +866,7 @@ END:VEVENT
 END:VCALENDAR
 ICS;
 
-        $version = \Sabre\VObject\Version::VERSION; 
+        $version = \Tine20\VObject\Version::VERSION; 
         $expectedICS = <<<ICS
 BEGIN:VCALENDAR
 VERSION:2.0

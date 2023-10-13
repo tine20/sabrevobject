@@ -1,14 +1,14 @@
 <?php
 
-namespace Sabre\VObject\Parser;
+namespace Tine20\VObject\Parser;
 
 use
-    Sabre\VObject\ParseException,
-    Sabre\VObject\EofException,
-    Sabre\VObject\Component,
-    Sabre\VObject\Property,
-    Sabre\VObject\Component\VCalendar,
-    Sabre\VObject\Component\VCard;
+    Tine20\VObject\ParseException,
+    Tine20\VObject\EofException,
+    Tine20\VObject\Component,
+    Tine20\VObject\Property,
+    Tine20\VObject\Component\VCalendar,
+    Tine20\VObject\Component\VCard;
 
 /**
  * MimeDir parser.
@@ -16,8 +16,8 @@ use
  * This class parses iCalendar 2.0 and vCard 2.1, 3.0 and 4.0 files. This
  * parser will return one of the following two objects from the parse method:
  *
- * Sabre\VObject\Component\VCalendar
- * Sabre\VObject\Component\VCard
+ * Tine20\VObject\Component\VCalendar
+ * Tine20\VObject\Component\VCard
  *
  * @copyright Copyright (C) fruux GmbH (https://fruux.com/)
  * @author Evert Pot (http://evertpot.com/)
@@ -114,12 +114,12 @@ class MimeDir extends Parser {
             case 'BEGIN:VCALENDAR' :
                 $class = isset(VCalendar::$componentMap['VCALENDAR'])
                     ? VCalendar::$componentMap[$name]
-                    : 'Sabre\\VObject\\Component\\VCalendar';
+                    : 'Tine20\\VObject\\Component\\VCalendar';
                 break;
             case 'BEGIN:VCARD' :
                 $class = isset(VCard::$componentMap['VCARD'])
                     ? VCard::$componentMap['VCARD']
-                    : 'Sabre\\VObject\\Component\\VCard';
+                    : 'Tine20\\VObject\\Component\\VCard';
                 break;
             default :
                 throw new ParseException('This parser only supports VCARD and VCALENDAR files');
@@ -232,7 +232,7 @@ class MimeDir extends Parser {
      *
      * This method strips any newlines and also takes care of unfolding.
      *
-     * @throws \Sabre\VObject\EofException
+     * @throws \Tine20\VObject\EofException
      * @return string
      */
     protected function readLine() {
